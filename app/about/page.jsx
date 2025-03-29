@@ -9,6 +9,7 @@ import { auth } from "../lib/firebaseConfig";
 
 export default function About() {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function About() {
       } else {
         setUser(currentUser);
       }
+      setLoading(false);
     });
 
     return () => unsubscribe();
@@ -28,9 +30,11 @@ export default function About() {
     router.push("/signin");
   };
 
+  if (loading) return <h2>Loading...</h2>;
+
   return (
     <div>
-      <h2>Dashboard</h2>
+      <h2>About</h2>
       {user ? (
         <div>
           <p>Welcome, {user.displayName || user.email}</p>
