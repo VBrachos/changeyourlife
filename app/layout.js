@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
       <body>
         <Provider store={store}>
             <AuthListener />
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          {/* className={`${geistSans.variable} ${geistMono.variable} antialiased`} */}
         
           {children}
         </Provider>
