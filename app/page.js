@@ -1,4 +1,5 @@
 import Image from "next/image";
+import UserProfile from "./components/UserProfile";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
+            <UserProfile/>
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
               app/page.js
             </code>
