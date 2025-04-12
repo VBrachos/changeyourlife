@@ -12,6 +12,7 @@ export default function UserProfile() {
     <div>
       <h2>Welcome, {user.displayName || user.email}</h2>
       {user.photoURL && <img src={user.photoURL} alt="Profile" width={50} />}
+      {user.uid}
     </div>
   );
 }

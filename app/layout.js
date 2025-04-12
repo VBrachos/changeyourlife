@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 //import { store } from "../store/store";
 import AuthListener from "./components/AuthListener";
 import { store } from "./store/store";
+import Navbar from "./components/NavBar";
 
 
 
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
         <Provider store={store}>
             <AuthListener />
           {/* className={`${geistSans.variable} ${geistMono.variable} antialiased`} */}
-        
+          <Navbar/>
           {children}
         </Provider>
       </body>
