@@ -3,7 +3,7 @@
 import { useSelector } from "react-redux";
 
 export default function UserProfile() {
-  const { user, loading } = useSelector((state) => state.user);
+  const { user, loading } = useSelector((state) => state.auth.user);
 
   if (loading) return <p>Loading user data...</p>;
   if (!user) return <p>No user logged in.</p>;

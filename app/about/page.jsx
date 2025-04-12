@@ -6,12 +6,14 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { auth } from "../lib/firebaseConfig";
+import { useSelector } from "react-redux";
 
 
 export default function About() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  const user1 = useSelector((state) => state.auth.user);
   
 
   useEffect(() => {
